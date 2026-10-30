@@ -1,0 +1,62 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: light;
+}
+
+/* Custom scrollbar in brand colors */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #F5EFE4;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #B08A4A;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #8E6D33;
+}
+
+/* Image fallback styling */
+.img-fallback {
+  background-color: #E5D6BE;
+  background-image: linear-gradient(135deg, rgba(245, 239, 228, 0.6) 0%, rgba(229, 214, 190, 0.8) 100%);
+}
+
+/* Refined typography styles */
+.font-editorial {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+}
+
+/* Subtle gold foil border effect */
+.border-gold-accent {
+  border-color: rgba(176, 138, 74, 0.28);
+}
+
+.border-gold-accent-hover:hover {
+  border-color: rgba(176, 138, 74, 0.7);
+}
+
+/* Respect reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+  
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
